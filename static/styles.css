@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+    --blue-900:#003366;
+    --blue-800:#004a99;
+    --blue-700:#005fb8;
+    --blue-200:#cce0ff;
+    --blue-100:#e6f0ff;
+    --blue-050:#f0f8ff;
+    --ink:#0f172a;
+    --white:#ffffff;
+    --shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+*{ box-sizing:border-box; }
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-color: var(--blue-100);
+    color: var(--ink);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    background: var(--blue-900);
+    color: var(--white);
+    padding: 1.5rem;
+    border-bottom: 4px solid #001a33;
+    margin: 0 0 30px 0;
+    font-size: 1.2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 40px auto;
+    background: var(--blue-200);
+    border: 4px solid var(--blue-900);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.25);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.form-item{
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: var(--blue-900);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 14px;
+    background: var(--blue-050);
+    border: 3px solid var(--blue-900);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--blue-700);
+    background: var(--white);
+}
+
+.btn {
+    margin-top: 12px;
+    padding: 14px 20px;
+    width: 100%;           /* Full width */
+    background: var(--blue-900);
+    color: var(--white);
+    border: 3px solid #001a33;
+    border-radius: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform .05s ease-in-out, background .2s ease;
+}
+
+.btn:hover { background: var(--blue-800); transform: translateY(-1px); }
+
+.info { color:#1f2937; }
+
+.error {
+    color: #b91c1c;
+    font-size: 12px;
+    background: #fee2e2;
+    border: 2px solid #ef4444;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Route cards container: full width, side-by-side */
+.route-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Individual route card - bigger and more spacious */
+.route-block{
+    background: var(--blue-050);
+    border: 2px solid var(--blue-900);
+    border-radius: 16px;
+    width: 420px;
+    min-height: 420px;
+    box-shadow: var(--shadow);
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.route-block h3{
+    margin: 0 0 12px 0;
+    color: var(--blue-900);
+    font-size: 1rem;
+}
+
+/* Downward path list */
+.path-block{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin: 12px 0 18px 0;
+}
+
+.stop{
+    background: var(--blue-200);
+    border-radius: 8px;
+    border: 2px solid var(--blue-900);
+    padding: 10px 14px;
+    margin: 8px 0;
+    min-width: 200px;
+    text-align:center;
+}
+
+.arrow{
+    font-size: 26px;
+    color: var(--blue-900);
+    margin: 6px 0;
+}
+
+.costs p{
+    margin: 8px 0;
+    font-size: 0.85rem;
+}
+
+.costs .grand{
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 2px dashed var(--blue-900);
+    font-size: 0.9rem;
+}
